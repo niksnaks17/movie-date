@@ -137,7 +137,6 @@ button:hover {
       I would gladly order the snacks/dinner via Grab 🍿✨ <br>
       Or you can order and I will just do our old love language: Fund Transfer!🥹
     </p>
-    <p id="notifyHint" style="font-size: 0.95rem; margin-top: 10px; color: #8a0058;"></p>
   </div>
 
   <script>
@@ -145,7 +144,6 @@ button:hover {
     const no = document.getElementById("no");
     const question = document.getElementById("questionCard");
     const message = document.getElementById("message");
-    const notifyHint = document.getElementById("notifyHint");
 
     let scale = 1;
     let attempts = 0;
@@ -177,8 +175,7 @@ button:hover {
       question.style.display = "none";
       message.style.display = "block";
       document.body.style.background = "linear-gradient(135deg, #ff4d6d, #ff8fab, #ffffff, #8b5cf6, #ff4d6d)";
-
-      notifyHint.textContent = "💌 Thanks! Your response has been recorded. See you on Discord tonight.";
+      window.location.href = "mailto:franconikka1017@gmail.com?subject=Movie%20Date%20Response&body=Someone%20has%20responded%20yes";
     });
   </script>
 </body>
