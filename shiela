@@ -146,7 +146,6 @@ button:hover {
     const question = document.getElementById("questionCard");
     const message = document.getElementById("message");
     const notifyHint = document.getElementById("notifyHint");
-    const recipientEmail = "franconikka1017@gmail.com";
 
     let scale = 1;
     let attempts = 0;
@@ -179,10 +178,7 @@ button:hover {
       message.style.display = "block";
       document.body.style.background = "linear-gradient(135deg, #ff4d6d, #ff8fab, #ffffff, #8b5cf6, #ff4d6d)";
 
-      const responseText = "Someone clicked YES for the movie date!";
-      notifyHint.textContent = "💌 Your response was received."
-
-      window.location.href = `mailto:${recipientEmail}?subject=Movie%20Date%20Response&body=${encodeURIComponent(responseText)}`;
+      notifyHint.textContent = "💌 Thanks! Your response has been recorded. See you on Discord tonight.";
     });
   </script>
 </body>
