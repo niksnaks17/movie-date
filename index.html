@@ -137,6 +137,7 @@ button:hover {
       I would gladly order the snacks/dinner via Grab 🍿✨ <br>
       Or you can order and I will just do our old love language: Fund Transfer!🥹
     </p>
+    <p id="notifyHint" style="font-size: 0.95rem; margin-top: 10px; color: #8a0058;"></p>
   </div>
 
   <script>
@@ -144,6 +145,8 @@ button:hover {
     const no = document.getElementById("no");
     const question = document.getElementById("questionCard");
     const message = document.getElementById("message");
+    const notifyHint = document.getElementById("notifyHint");
+    const recipientEmail = "your@email.com";
 
     let scale = 1;
     let attempts = 0;
@@ -175,6 +178,11 @@ button:hover {
       question.style.display = "none";
       message.style.display = "block";
       document.body.style.background = "linear-gradient(135deg, #ff4d6d, #ff8fab, #ffffff, #8b5cf6, #ff4d6d)";
+
+      const responseText = "Someone clicked YES for the movie date!";
+      notifyHint.textContent = "💌 Your response was received."
+
+      window.location.href = `mailto:${recipientEmail}?subject=Movie%20Date%20Response&body=${encodeURIComponent(responseText)}`;
     });
   </script>
 </body>
