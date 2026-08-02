@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Tiny Question 💜</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Segoe UI", sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(
+135deg,
+#D52D00,
+#EF7627,
+#FF9A56,
+#FFFFFF,
+#D362A4,
+#B55690,
+#A30262
+);
+overflow:hidden;
+}
+
+.card{
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(12px);
+padding:45px;
+border-radius:24px;
+text-align:center;
+width:90%;
+max-width:500px;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+h1{
+font-size:2rem;
+margin-bottom:15px;
+color:#8a0058;
+}
+
+p{
+color:#555;
+margin-bottom:35px;
+line-height:1.6;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:18px;
+align-items:center;
+}
+
+button{
+border:none;
+cursor:pointer;
+transition:.25s;
+border-radius:999px;
+font-size:18px;
+font-weight:600;
+}
+
+#yes{
+background:#B55690;
+color:white;
+padding:16px 34px;
+}
+
+#yes:hover{
+transform:scale(1.05);
+}
+
+#no{
+background:#eee;
+color:#444;
+padding:16px 34px;
+}
+
+#message{
+display:none;
+}
+
+.heart{
+font-size:60px;
+animation:float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+50%{transform:translateY(-8px);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="questionCard">
+
+<h1>Hey, you. 💜</h1>
+
+<p>
+Would you like to have a Discord movie date with me this weekend?
+</p>
+
+<div class="buttons">
+<button id="yes">Yes 💖</button>
+<button id="no">No 🙈</button>
+</div>
+
+</div>
+
+<div class="card" id="message">
+<div class="heart">🩷🧡🤍💖❤️</div>
+
+<h1>It's a date!</h1>
+
+<p>
+Yay!! 🥹<br><br>
+
+I'll bring the movie.<br>
+You bring yourself.<br>
+We'll figure out the snacks together. 🍿✨
+</p>
+
+</div>
+
+<script>
+const yes = document.getElementById("yes");
+const no = document.getElementById("no");
+
+const question = document.getElementById("questionCard");
+const message = document.getElementById("message");
+
+let scale = 1;
+
+no.addEventListener("click", () => {
+scale += 0.35;
+
+yes.style.transform = `scale(${scale})`;
+
+const messages = [
+"Are you sure? 🥺",
+"Really sure? 😭",
+"Think again 👉👈",
+"Pretty please? 💜",
+"I'll let you pick the movie 🍿",
+"You still said no? 😔",
+"Last chance... 👀"
+];
+
+no.textContent = messages[Math.floor(Math.random()*messages.length)];
+});
+
+yes.addEventListener("click", () => {
+question.style.display="none";
+message.style.display="block";
+
+document.body.style.background="linear-gradient(135deg,#D52D00,#EF7627,#FFFFFF,#D362A4,#A30262)";
+});
+</script>
+
+</body>
+</html>
