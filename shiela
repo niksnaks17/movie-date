@@ -146,7 +146,7 @@ button:hover {
     const question = document.getElementById("questionCard");
     const message = document.getElementById("message");
     const notifyHint = document.getElementById("notifyHint");
-    const recipientEmail = "your@email.com";
+    const recipientEmail = "franconikka1017@gmail.com";
 
     let scale = 1;
     let attempts = 0;
