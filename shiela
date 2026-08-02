@@ -175,7 +175,6 @@ button:hover {
       question.style.display = "none";
       message.style.display = "block";
       document.body.style.background = "linear-gradient(135deg, #ff4d6d, #ff8fab, #ffffff, #8b5cf6, #ff4d6d)";
-      window.location.href = "mailto:franconikka1017@gmail.com?subject=Movie%20Date%20Response&body=Someone%20has%20responded%20yes";
     });
   </script>
 </body>
